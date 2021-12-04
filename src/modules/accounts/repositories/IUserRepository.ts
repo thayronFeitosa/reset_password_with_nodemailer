@@ -24,6 +24,7 @@ interface IUserRepository {
   findByuuid(uuid: string): Promise<User>;
   authenticate(email: string, password: string): Promise<User>
   userAlreadyRegistered({ name, email }: IUserAlreadyRegistered): Promise<boolean>
+  findByEmail(email: string): Promise<User>;
 }
 
 export {
